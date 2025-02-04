@@ -1,0 +1,159 @@
+:root {
+  --primary: #6366f1;
+  --danger: #ef4444;
+  --bg: #fff;
+  --text: #1e293b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f8fafc;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--primary);
+  text-align: center;
+  margin: 1rem 0 2rem;
+  font-size: 2rem;
+}
+
+.card {
+  background: var(--bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+input, button {
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input {
+  border: 2px solid #e2e8f0;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#deleteButtons button {
+  background: var(--danger);
+}
+
+.task-list {
+  list-style: none;
+  background: var(--bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 1rem 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.task-item:last-child {
+  border: none;
+}
+
+.checkbox {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 4px;
+  margin-right: 1rem;
+  cursor: pointer;
+  appearance: none;
+}
+
+.checkbox:checked {
+  background: var(--primary) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/60% no-repeat;
+  border-color: var(--primary);
+}
+
+.task-date {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+}
+
+.actions {
+  display: none;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+  button span { 
+    display: none; 
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+  }
+}
+.nav-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn-nav {
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.btn-nav:hover {
+  opacity: 0.9;
+}
