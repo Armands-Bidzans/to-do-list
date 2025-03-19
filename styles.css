@@ -2,7 +2,6 @@
   --primary: #6366f1;
   --danger: #ef4444;
   --bg: #fff;
-  --text: #1e293b;
 }
 
 * {
@@ -46,15 +45,7 @@ input, button {
   padding: 0.75rem;
   border-radius: 8px;
   font-size: 1rem;
-}
-
-input {
   border: 2px solid #e2e8f0;
-}
-
-input:focus {
-  outline: none;
-  border-color: var(--primary);
 }
 
 button {
@@ -62,19 +53,10 @@ button {
   color: white;
   border: none;
   cursor: pointer;
-  transition: opacity 0.2s;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   justify-content: center;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-#deleteButtons button {
-  background: var(--danger);
 }
 
 .task-list {
@@ -90,10 +72,6 @@ button:hover {
   align-items: center;
   padding: 1rem;
   border-bottom: 1px solid #f1f5f9;
-}
-
-.task-item:last-child {
-  border: none;
 }
 
 .checkbox {
@@ -123,17 +101,6 @@ button:hover {
   margin-top: 1rem;
 }
 
-@media (max-width: 480px) {
-  button span { 
-    display: none; 
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none;
-  }
-}
 .nav-buttons {
   display: flex;
   gap: 0.5rem;
@@ -144,16 +111,18 @@ button:hover {
 .btn-nav {
   padding: 0.75rem;
   border-radius: 8px;
-  font-size: 1rem;
   background: var(--primary);
   color: white;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  transition: opacity 0.2s;
 }
 
-.btn-nav:hover {
-  opacity: 0.9;
+#deleteButtons button {
+  background: var(--danger);
+}
+
+@media (max-width: 480px) {
+  button span { display: none }
 }
